@@ -13,7 +13,7 @@ def start_repl(pebble_id):
     code.interact(local=locals())
 
 parser = argparse.ArgumentParser(description='An interactive environment for libpebble.')
-parser.add_argument('pebble_id', metavar='PEBBLE_ID', type=str, help='the last 4 digits of the target Pebble\'s MAC address')
+parser.add_argument('pebble_id', nargs='?', metavar='PEBBLE_ID', type=str, help='the last 4 digits of the target Pebble\'s MAC address (default: autodetect)')
 args = parser.parse_args()
 
 start_repl(args.pebble_id)
