@@ -91,7 +91,7 @@ class Pebble(object):
 
 	def __init__(self, id):
 		if id is None:
-			id = Pebble.AutodetectDevice()
+			self.id = Pebble.AutodetectDevice()
 		self.id = id
 		self._alive = True
 		self._endpoint_handlers = {}
